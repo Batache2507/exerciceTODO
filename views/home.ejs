@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Liste Todos</title>
+    </head>
+<body>
+    <h1>Liste de mes todos :</h1>
+    <ul>
+        <% for (var i = 0; i < todo.length; i++) { %>
+        <li>
+            <%= todo[i] %> 
+            <a href="/todo/delete/<%= i %>">Delete</a>
+        </li>
+        <% } %>
+    </ul>
+    <form action="/todo/new">
+        <input type="text" name="todoItem"/>
+        <input type="submit" name="save" value="Sauver"/> 
+        
+    </form>
+</body>
+</html>
